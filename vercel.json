@@ -1,6 +1,32 @@
 {
   "headers": [
-    { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }, { "key": "Permissions-Policy", "value": "camera=(self)" } ] },
-    { "source": "/pose/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(self)"
+        }
+      ]
+    },
+    {
+      "source": "/pose/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:slug(kim-jinhyun|choi-miyeon|namgung-seok|kim|choi|nam)",
+      "destination": "/index.html"
+    }
   ]
 }
