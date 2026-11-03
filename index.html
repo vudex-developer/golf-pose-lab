@@ -158,6 +158,7 @@ svg text{font-family:'IBM Plex Sans KR','Noto Sans CJK KR',sans-serif}
 <script src="pose/pose.js"></script>
 <script src="sample.js"></script>
 <script src="sample_choi.js" onerror="void 0"></script>
+<script src="sample_nam.js" onerror="void 0"></script>
 <script>
 'use strict';
 /* ================= constants ================= */
@@ -541,6 +542,7 @@ async function detect(src){lastRes=null;await pose.send({image:src});return last
 /* ================= samples ================= */
 const SAMPLES=[Object.assign({id:'kim',clip:'sample/clip',title:'김진현 프로 스윙 분석',note:'구간 프레임은 클럽 위치를 영상으로 판독해 보정'},SAMPLE)];
 if(window.SAMPLE_CHOI)SAMPLES.push(window.SAMPLE_CHOI);
+if(window.SAMPLE_NAM)SAMPLES.push(window.SAMPLE_NAM);
 const SBUILT={};
 function buildSample(s){
   if(SBUILT[s.id])return;SBUILT[s.id]=true;
